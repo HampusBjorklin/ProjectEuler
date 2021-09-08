@@ -1,5 +1,19 @@
 import numpy as np
 
+def dividing_numbers(num):  # Slightly changed from last use...
+    divsors = []
+    for i in range(1,num//2+1):  # Only need to try from half of the and then add 1 later
+        if num%i == 0:
+            e = num/i
+            if e < i:
+                break
+            if e == i or i == 1: # Changed so input num not in list
+                divsors.append(int(i))
+            else:
+                divsors.append(int(i))   # Each dividing number come in pairs, add both to list
+                divsors.append(int(e))   # Stop when paired divisor is larger is smaller than i
+    return divsors
+
 
 def num_to_list(num):
     num_list = []

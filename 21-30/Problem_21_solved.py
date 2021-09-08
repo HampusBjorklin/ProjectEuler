@@ -5,3 +5,16 @@
 # The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
 # Evaluate the sum of all the amicable numbers under 10000.
 
+from reused_functions import dividing_numbers
+amicable = []
+
+for n in range(10001):
+    a = sum(dividing_numbers(n))
+    b = sum(dividing_numbers(a))
+    if b == n and a != b:
+        if a not in amicable:
+            amicable.append(a)
+        if b not in amicable:
+            amicable.append(b)
+
+print(sum(amicable))

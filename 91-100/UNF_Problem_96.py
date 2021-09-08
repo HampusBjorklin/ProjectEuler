@@ -37,7 +37,6 @@ def solve():
                         matrix[r, c] = 0
                 return
     print(matrix)
-    input('More?')
 
 
 
